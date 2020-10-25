@@ -20,12 +20,11 @@ public class Patrol : MonoBehaviour
 
     // Update is called once per frame
     GameObject GetNextWaypoint(){ //restart list if index == max waypoint size
+        currentWPIndex++;
         if(currentWPIndex == waypoints.Count){
             currentWPIndex = 0;
         }
-        else{
-            currentWPIndex++;
-        }
+     
         return waypoints[currentWPIndex];
     }
     public void PatrolWaypoints()

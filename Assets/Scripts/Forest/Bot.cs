@@ -87,9 +87,9 @@ public class Bot : MonoBehaviour
         wanderTarget *= wanderRadius;
 
         Vector3 targetLocal = wanderTarget + new Vector3(0, 0, wanderDistance);
-        Vector3 targetWorld = this.gameObject.transform.InverseTransformVector(targetLocal);
+        //Vector3 targetWorld = this.gameObject.transform.InverseTransformVector(targetLocal);
 
-        Seek(transform.position + targetWorld);
+        Seek(transform.position + targetLocal);
     }
 
     void Hide()
@@ -148,8 +148,11 @@ public class Bot : MonoBehaviour
     public bool CanSeeTarget()
     {
         RaycastHit raycastInfo;
-        Vector3 rayToTarget = target.transform.position - this.transform.position;
-        if (Physics.Raycast(this.transform.position, rayToTarget, out raycastInfo))
+        Vector3 targetXZPos = new Vector3(target.transform.position.x, 1.5f, target.transform.position.z);
+        Vector3 thisXZPos = new Vector3(transform.position.x, 1.5f, transform.position.z);
+        Vector3 rayToTarget = targetXZPos - thisXZPos;
+        Debug.DrawRay(thisXZPos, rayToTarget, Color.magenta);
+        if (Physics.Raycast(thisXZPos, rayToTarget, out raycastInfo))
         {
             if (raycastInfo.transform.gameObject.tag == "Player")
                 return true;
