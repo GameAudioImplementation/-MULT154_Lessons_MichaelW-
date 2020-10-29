@@ -11,6 +11,7 @@ public class BearBrain : MonoBehaviour
     private Bot bot;
     private Vector3 hivePos;
     private bool hiveDropped = false; 
+    private bool isStopped = false;
     void Start()
     {
         bot = GetComponent<Bot>(); 
@@ -24,22 +25,30 @@ public class BearBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * 10, Color.blue);
-        if (hiveDropped){
-            bot.Seek(hivePos);
-        }
-        else
-        {
-            if(bot.CanTargetSeeMe()){
-            bot.Evade();
+        if(!isStopped){
+            if (hiveDropped){
+                bot.Seek(hivePos);
             }
-            else if(bot.CanSeeTarget()){
-                bot.Pursue();
-            }
-            else {
-                bot.Wander();
+            else
+            {
+                if(bot.CanTargetSeeMe()){
+                bot.Evade();
+                }
+                else if(bot.CanSeeTarget()){
+                    bot.Pursue();
+                }
+                else {
+                    bot.Wander();
+                }
             }
         }
         
     }
+    private void OnCollisionEnter(Collision collision){
+        if(collision.collider.CompareTag("Player")){
+            bot.Stop();
+            isStopped = true;
+        }
+    }
+   
 }
