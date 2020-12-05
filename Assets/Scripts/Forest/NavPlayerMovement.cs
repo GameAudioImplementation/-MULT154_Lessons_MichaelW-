@@ -68,7 +68,9 @@ public class NavPlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         Debug.Log("collider");
-        StartCoroutine(LookAndLookAway(lookTarget.position, other.transform.position));
+        if (other.CompareTag("Hazard")){
+            StartCoroutine(LookAndLookAway(lookTarget.position, other.transform.position));
+        }
         
     }
     private IEnumerator LookAndLookAway(Vector3 targetPos, Vector3 hazardPos){
@@ -78,11 +80,11 @@ public class NavPlayerMovement : MonoBehaviour
         const int INTERVALS = 20;
         const float INTERVAL = 0.5f / INTERVALS; 
         float angleInterval = angle / INTERVALS;
-        for(int i = 0; 1 < INTERVALS; i++){
+        for(int i = 0; i < INTERVALS; i++){
             lookTarget.RotateAround(transform.position, Vector3.up, -angleInterval);
             yield return new WaitForSeconds(INTERVAL);
         }
-        for(int i = 0; 1 < INTERVALS; i++){
+        for(int i = 0; i < INTERVALS; i++){
             lookTarget.RotateAround(transform.position, Vector3.up, angleInterval);
             yield return new WaitForSeconds(INTERVAL);
         }
