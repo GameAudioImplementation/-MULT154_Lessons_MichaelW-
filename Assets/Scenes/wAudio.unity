@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 34703536}
   - component: {fileID: 34703535}
   - component: {fileID: 34703534}
+  - component: {fileID: 34703538}
   m_Layer: 0
   m_Name: RiverWater
   m_TagString: Untagged
@@ -252,12 +253,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34703533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 12, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34703538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34703533}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2165fa810b543cb4ea2f6b8e4014cb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &40322382
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +643,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a93126349e284145ad18fcfd60254b4, type: 2}
+  - {fileID: 2100000, guid: 0096f93da75355447a0e5f41632f7dd9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -666,7 +680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472362986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 120, y: 1, z: 80}
   m_Children: []
   m_Father: {fileID: 0}
