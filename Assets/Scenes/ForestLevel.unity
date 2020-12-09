@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82163883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.94, y: 3.32, z: -87.7}
+  m_LocalPosition: {x: -4.1, y: 3.32, z: -88.55}
   m_LocalScale: {x: 2.5, y: 4, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -368,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160842461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.41, y: 1.876, z: 100}
+  m_LocalPosition: {x: 12.85, y: 20, z: -46.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1898208850}
@@ -986,7 +986,7 @@ GameObject:
   m_Name: SwarmRelm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 3
+  m_NavMeshLayer: 12
   m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!65 &439091324
@@ -1576,7 +1576,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 8
+  m_WalkableMask: 4096
   m_ObstacleAvoidanceType: 4
 --- !u!65 &680413739
 BoxCollider:
@@ -1646,7 +1646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680413737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.9, y: 13.03, z: -80.4}
+  m_LocalPosition: {x: -28.9, y: 3.02, z: -83.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 551549741}
@@ -2290,7 +2290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984470435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46, y: 0, z: -9.2}
+  m_LocalPosition: {x: 46, y: 2, z: -9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1526249116}
@@ -3079,7 +3079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480592472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33, y: 0, z: 19.8}
+  m_LocalPosition: {x: 33, y: 2, z: 19.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1526249116}
@@ -3214,7 +3214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516289291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46, y: 0, z: -11.1}
+  m_LocalPosition: {x: 46, y: 2, z: -11.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1526249116}
@@ -3484,7 +3484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584821926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.97, y: 0, z: -1.1}
+  m_LocalPosition: {x: 16.97, y: 2, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1526249116}
@@ -4283,7 +4283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796963793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.5, y: 0, z: 12.3}
+  m_LocalPosition: {x: 28.5, y: 2, z: 12.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1526249116}
@@ -4815,7 +4815,7 @@ PrefabInstance:
     - target: {fileID: 5560970706085116137, guid: 3bb60afabcbd28d4b965b3099905bd0e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.84
+      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 5560970706085116137, guid: 3bb60afabcbd28d4b965b3099905bd0e,
         type: 3}
