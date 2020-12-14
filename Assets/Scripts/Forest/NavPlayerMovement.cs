@@ -9,11 +9,12 @@ public class NavPlayerMovement : MonoBehaviour
     Rigidbody rgBody = null;
     float trans = 0;
     float rotate = 0;
-    public delegate void DropHive(Vector3 pos);
-    public static event DropHive DroppedHive;
     private Animator animator;
     private Camera camera;
     private Transform lookTarget;
+
+    public delegate void DropHive(Vector3 pos);
+    public static event DropHive DroppedHive;
 
     private void Start()
     {

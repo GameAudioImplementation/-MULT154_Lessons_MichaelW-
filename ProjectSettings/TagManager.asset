@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hazard
+  - Item
+  - TriggerAuxMusic
+  - LilyPad
+  - Exit
   layers:
   - Default
   - TransparentFX
