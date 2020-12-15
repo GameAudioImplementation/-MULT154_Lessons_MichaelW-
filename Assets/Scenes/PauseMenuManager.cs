@@ -8,10 +8,11 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject pausePanel;
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         pausePanel.SetActive(false);
         float value = PlayerPrefs.GetFloat(AudioManager.VOLUME_LEVEL_KEY, AudioManager.DEFAULT_VOLUME);
         pausePanel.GetComponentInChildren<Slider>().value = value;
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
