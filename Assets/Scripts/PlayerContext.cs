@@ -149,7 +149,7 @@ public class ForestState : PlayerState
         float translation = Input.GetAxis("Vertical");
         float rotation = Input.GetAxis("Horizontal");
 
-        anim.SetFloat("speed", translation);
+        anim.SetFloat("Speed", translation);
 
         trans += translation;
         rotate += rotation;
